@@ -8,6 +8,7 @@ Created on Mon Apr  1 20:36:49 2024
 import torch
 from IPython import display
 from d2l import torch as d2l
+import matplotlib.pyplot as plt
 
 batch_size = 256
 train_iter, test_iter = d2l.load_data_fashion_mnist(batch_size)
@@ -60,7 +61,7 @@ def accuracy(y_hat, y):  # @save
     return float(cmp.type(y.dtype).sum())
 
 
-print(accuracy(y_hat, y) / len(y))
+
 
 
 def evaluate_accuracy(net, data_iter):  # @save
@@ -90,7 +91,7 @@ class Accumulator:  # @save
         return self.data[idx]
 
 
-print(evaluate_accuracy(net, test_iter))
+# evaluate_accuracy(net, test_iter)
 
 
 def train_epoch_ch3(net, train_iter, loss, updater):  # @save
@@ -156,6 +157,8 @@ class Animator:  #@save
             self.axes[0].plot(x, y, fmt)
         self.config_axes()
         display.display(self.fig)
+        # plt.draw()
+        # plt.pause(0.001)
         display.clear_output(wait=True)
         
         
@@ -172,10 +175,42 @@ def train_ch3(net, train_iter, test_iter, loss, num_epochs, updater):  #@save
     assert train_acc <= 1 and train_acc > 0.7, train_acc
     assert test_acc <= 1 and test_acc > 0.7, test_acc
     
-lr = 0.1
+
 
 def updater(batch_size):
     return d2l.sgd([W, b], lr, batch_size)
 
-num_epochs = 10
-train_ch3(net, train_iter, test_iter, cross_entropy, num_epochs, updater)
+if __name__ == '__main__':
+    
+    
+    print("accuracy: ", accuracy(y_hat, y) / len(y))
+    
+    
+    lr = 0.1
+    
+    
+    num_epochs = 10
+    train_ch3(net, train_iter, test_iter, cross_entropy, num_epochs, updater)
+    # d2l.plt.show()
+
+
+
+# Spyder里的问题：
+#   File D:\anaconda\Lib\site-packages\torch\utils\data\dataloader.py:1146 in _try_get_data
+#     raise RuntimeError(f'DataLoader worker (pid(s) {pids_str}) exited unexpectedly') from e
+# RuntimeError: DataLoader worker (pid(s) 29396, 27064, 3472, 18476) exited unexpectedly
+
+# Solution:
+#     if __name__ == '__main__':
+
+
+
+# Pycharm里的问题：
+# <Figure size 350x250 with 1 Axes>
+# <Figure size 350x250 with 1 Axes>
+
+# Solution: 
+#         plt.draw()
+#         plt.pause(0.001)
+
+#     d2l.plt.show()
