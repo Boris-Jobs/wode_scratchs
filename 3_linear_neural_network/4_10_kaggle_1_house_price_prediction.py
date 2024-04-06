@@ -83,7 +83,10 @@ def log_rmse(net, features, labels):
 
 def train(net, train_features, train_labels, test_features, test_labels, num_epochs, learning_rate, weight_decay, batch_size):
     train_ls, test_ls = [], []
+    # 创建两个空列表，用于存储训练过程中的训练集和测试集的损失值。
     train_iter = d2l.load_array((train_features, train_labels), batch_size)
+    # 通过调用 d2l.load_array 函数将训练数据划分成批量，以便进行批量训练。这里使用 batch_size 指定每个批次的样本数量。
+    
     # 这里使用的是Adam优化算法
     optimizer = torch.optim.Adam(net.parameters(),
     lr = learning_rate,
