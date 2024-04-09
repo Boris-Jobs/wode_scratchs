@@ -185,7 +185,7 @@ if __name__ == '__main__':
     all_features = all_features.astype('float32')
     train_features = torch.tensor(all_features[:n_train].values, dtype=torch.float32)
     test_features = torch.tensor(all_features[n_train:].values, dtype=torch.float32)
-    train_labels = torch.tensor(train_data.SalePrice.values.reshape(-1, 1),               dtype=torch.float32)
+    train_labels = torch.tensor(train_data.SalePrice.values.reshape(-1, 1), dtype=torch.float32)
     
     
     loss = nn.MSELoss()  # Mean Squared Error 均方误差
