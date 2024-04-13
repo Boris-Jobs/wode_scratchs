@@ -1,6 +1,21 @@
 import torch
 from torch import nn
-from d2l import torch as d2l
+import _wode_functions as cz
+
+
+
+class Accumulator:
+    def __init__(self, length: int):
+        self.data = [0.0] * length
+
+    def add(self, *args):
+        self.data = [a + float(b) for a, b in zip(self.data, args)]
+
+    def reset(self):
+        self.data = [0.0] * len(self.data)
+
+    def __getitem__(self, index):
+        return self.data[index]
 
 
 def evaluate_accuracy_gpu(net, data_iter, device=None): #@save
@@ -10,7 +25,7 @@ def evaluate_accuracy_gpu(net, data_iter, device=None): #@save
         if not device:
             device = next(iter(net.parameters())).device
     # 正确预测的数量，总预测的数量
-    metric = d2l.Accumulator(2)
+    metric = Accumulator(2)
     with torch.no_grad():
         for X, y in data_iter:
             if isinstance(X, list):
@@ -19,7 +34,7 @@ def evaluate_accuracy_gpu(net, data_iter, device=None): #@save
             else:
                 X = X.to(device)
             y = y.to(device)
-            metric.add(d2l.accuracy(net(X), y), y.numel())
+            metric.add(cz.accuracy(net(X), y), y.numel())
     return metric[0] / metric[1]
 
 
@@ -33,12 +48,12 @@ def train_ch6(net, train_iter, test_iter, num_epochs, lr, device):
     net.to(device)
     optimizer = torch.optim.SGD(net.parameters(), lr=lr)
     loss = nn.CrossEntropyLoss()
-    animator = d2l.Animator(xlabel='epoch', xlim=[1, num_epochs],
+    animator = cz.Animator(xlabel='epoch', xlim=[1, num_epochs],
                             legend=['train loss', 'train acc', 'test acc'])
-    timer, num_batches = d2l.Timer(), len(train_iter)
+    timer, num_batches = cz.Timer(), len(train_iter)
     for epoch in range(num_epochs):
         # 训练损失之和，训练准确率之和，样本数
-        metric = d2l.Accumulator(3)
+        metric = Accumulator(3)
         net.train()
         for i, (X, y) in enumerate(train_iter):
             timer.start()
@@ -49,7 +64,7 @@ def train_ch6(net, train_iter, test_iter, num_epochs, lr, device):
             l.backward()
             optimizer.step()
             with torch.no_grad():
-                metric.add(l * X.shape[0], d2l.accuracy(y_hat, y), X.shape[0])
+                metric.add(l * X.shape[0], cz.accuracy(y_hat, y), X.shape[0])
             timer.stop()
             train_l = metric[0] / metric[2]
             train_acc = metric[1] / metric[2]
@@ -76,12 +91,13 @@ if __name__ == '__main__':
         nn.Linear(84, 10))
 
     X = torch.rand(size=(1, 1, 28, 28), dtype=torch.float32)
+
     for layer in net:
         X = layer(X)
         print(layer.__class__.__name__,'output shape: \t',X.shape)
 
     batch_size = 256
-    train_iter, test_iter = d2l.load_data_fashion_mnist(batch_size=batch_size)
+    train_iter, test_iter = cz.load_data_fashion_mnist(batch_size=batch_size)
 
     lr, num_epochs = 0.9, 10
-    train_ch6(net, train_iter, test_iter, num_epochs, lr, d2l.try_gpu())
+    train_ch6(net, train_iter, test_iter, num_epochs, lr, cz.try_gpu())
