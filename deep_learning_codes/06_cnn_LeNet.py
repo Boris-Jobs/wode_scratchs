@@ -7,6 +7,8 @@ Created on 2024-04-13 19:01:47
 Our mission is as same as xAi's, 'Understand the Universe'.
 
 AI that benefits all humanity is all you need.
+
+这个模型是由AT&T贝尔实验室的研究员Yann LeCun在1989年提出的（并以其命名），目的是识别图像 (LeCun et al., 1998)中的手写数字。
 """
 
 import torch
