@@ -68,6 +68,7 @@ if __name__ == '__main__':
         filled=True
     )
 
+    # tree_clf.tree_
 
     custom_cmap = ListedColormap(['#fafab0', '#9898ff', '#a0faa0'])
     plt.figure(figsize=(8, 4))
