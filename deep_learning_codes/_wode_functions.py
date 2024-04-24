@@ -89,7 +89,7 @@ class Accumulator:
 #####################################################################
 
 def load_data_fashion_mnist(batch_size, resize=None):
-    """Download the Fashion-MNIST dataset and then load it into memory.
+    r"""Download the Fashion-MNIST dataset and then load it into memory.
 
     Defined in :numref:`sec_utils`"""
 
