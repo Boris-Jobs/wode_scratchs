@@ -98,7 +98,7 @@ def load_data_fashion_mnist(batch_size, resize=None):
 
     if resize:
         trans.insert(0, transforms.Resize(resize))
-    trans = transforms.Compose(trans)
+    trans = transforms.Compose(trans)  # 把变换都组合起来
     mnist_train = torchvision.datasets.FashionMNIST(
         root="./data", train=True, transform=trans, download=True)
     mnist_test = torchvision.datasets.FashionMNIST(
