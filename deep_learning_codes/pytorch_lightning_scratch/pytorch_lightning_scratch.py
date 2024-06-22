@@ -11,11 +11,11 @@ I am recently interested in Multimodal Learning.
 
 import torch
 import pytorch_lightning as pl
-from blackd.middlewares import F
-from torchvision.datasets import MNIST
+import torch.nn.functional as F
+from torch.utils.data import random_split, DataLoader
+from torchvision import datasets, transforms
 import torch.nn as nn
 from torch.optim import Adam
-from torch.nn.functional import cross_entropy
 import torchmetrics
 from torchmetrics import Metric
 
@@ -36,14 +36,14 @@ class MyAccuracy(Metric):
 
 
 class NN(pl.LightningModule):
-    def __init__(self, input_size, num_classes):
+    def __init__(self, inputSize, numClasses):
         super().__init__()
-        self.fc1 = nn.Linear(input_size, 50)
-        self.fc2 = nn.Linear(50, num_classes)
+        self.fc1 = nn.Linear(inputSize, 50)
+        self.fc2 = nn.Linear(50, numClasses)
         self.loss_fn = nn.CrossEntropyLoss()
-        self.accuracy = torchmetrics.Accuracy(task="multiclass", num_classes=num_classes)
+        self.accuracy = torchmetrics.Accuracy(task="multiclass", num_classes=numClasses)
         self.my_accuracy = MyAccuracy()
-        self.f1_score = torchmetrics.F1Score(task="multiclass", num_classes=num_classes)
+        self.f1_score = torchmetrics.F1Score(task="multiclass", num_classes=numClasses)
 
     def forward(self, x):
         x = F.relu(self.fc1(x))
@@ -60,12 +60,12 @@ class NN(pl.LightningModule):
         return {'loss': loss, 'accuracy': accuracy, 'f1_score': f1_score, 'my_accuracy': my_accuracy}
 
     def validation_step(self, batch, batch_idx):
-        loss, scores, y = self._test_step(batch, batch_idx)
+        loss, scores, y = self._common_step(batch, batch_idx)
         self.log('val_loss', loss)
         return loss
 
     def test_step(self, batch, batch_idx):
-        loss, scores, y = self._test_step(batch, batch_idx)
+        loss, scores, y = self._common_step(batch, batch_idx)
         self.log('test_loss', loss)
         return loss
 
@@ -87,9 +87,50 @@ class NN(pl.LightningModule):
         return Adam(self.parameters(), lr=1e-3)
 
 
+class MnistDataModule(pl.LightningDataModule):
+    def __init__(self, data_dir, bs, num_workers):
+        super().__init__()
+        self.data_dir = data_dir
+        self.batch_size = bs
+        self.num_workers = num_workers
+
+    def prepare_data(self):
+        # single GPU
+        datasets.MNIST(self.data_dir, train=True, download=True)
+        datasets.MNIST(self.data_dir, train=False, download=True)
+
+    def setup(self, stage):
+        # multi GPU
+        entire_dataset = datasets.MNIST(root=self.data_dir, train=True, transform=transforms.ToTensor(), download=False)
+        self.train_ds, self.val_ds = random_split(entire_dataset, [50000, 10000])
+        self.test_ds = datasets.MNIST(root=self.data_dir, train=False, transform=transforms.ToTensor(), download=False)
+
+    def train_dataloader(self):
+        return DataLoader(self.train_ds, batch_size=self.batch_size, num_workers=self.num_workers, shuffle=True)
+
+    def val_dataloader(self):
+        return DataLoader(self.val_ds, batch_size=self.batch_size, num_workers=self.num_workers, shuffle=False)
+
+    def test_dataloader(self):
+        return DataLoader(self.test_ds, batch_size=self.batch_size, num_workers=self.num_workers, shuffle=False)
 
 
 if __name__ == '__main__':
-    trainer = pl.Trainer(accelerator='gpu', devicees=[0], min_steps=1, max_steps=3, precision=16,
-                         num_nodes=1)
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+    batch_size = 64
+    input_size = 784
+    learning_rate = 0.001
+    num_classes = 10
+    num_epochs = 3
+
+    model = NN(inputSize=input_size, numClasses=num_classes).to(device)
+    trainer = pl.Trainer(accelerator='gpu', devices=[0], min_steps=1, max_steps=3, precision=16)
+    dm = MnistDataModule(data_dir='', bs=batch_size, num_workers=8)
+
+    trainer.fit(model, datamodule=dm)
+    trainer.validate(model, datamodule=dm)
+    trainer.test(model, datamodule=dm)
+
+
 
