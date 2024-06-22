@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on 2024-06-21 11:38:16
+Created on 2024-06-22 11:05:23
 
 @author: borisσ, Chairman of FrameX Inc.
 
@@ -12,8 +12,6 @@ I am recently interested in Multimodal Learning.
 import torch
 import pytorch_lightning as pl
 import torch.nn.functional as F
-from torch.utils.data import random_split, DataLoader
-from torchvision import datasets, transforms
 import torch.nn as nn
 from torch.optim import Adam
 import torchmetrics
@@ -100,82 +98,3 @@ class NN(pl.LightningModule):
 
     def configure_optimizers(self):
         return Adam(self.parameters(), lr=1e-3)
-
-
-class MnistDataModule(pl.LightningDataModule):
-    def __init__(self, data_dir, bs, num_workers):
-        super().__init__()
-        self.data_dir = data_dir
-        self.batch_size = bs
-        self.num_workers = num_workers
-
-    def prepare_data(self):
-        # single GPU
-        datasets.MNIST(self.data_dir, train=True, download=True)
-        datasets.MNIST(self.data_dir, train=False, download=True)
-
-    def setup(self, stage):
-        # multi GPU
-        entire_dataset = datasets.MNIST(
-            root=self.data_dir,
-            train=True,
-            transform=transforms.ToTensor(),
-            download=False,
-        )
-        self.train_ds, self.val_ds = random_split(entire_dataset, [50000, 10000])
-        self.test_ds = datasets.MNIST(
-            root=self.data_dir,
-            train=False,
-            transform=transforms.ToTensor(),
-            download=False,
-        )
-
-    def train_dataloader(self):
-        return DataLoader(
-            self.train_ds,
-            batch_size=self.batch_size,
-            num_workers=self.num_workers,
-            shuffle=True,
-        )
-
-    def val_dataloader(self):
-        return DataLoader(
-            self.val_ds,
-            batch_size=self.batch_size,
-            num_workers=self.num_workers,
-            shuffle=False,
-        )
-
-    def test_dataloader(self):
-        return DataLoader(
-            self.test_ds,
-            batch_size=self.batch_size,
-            num_workers=self.num_workers,
-            shuffle=False,
-        )
-
-
-if __name__ == "__main__":
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
-    batch_size = 64
-    input_size = 784
-    learning_rate = 0.001
-    num_classes = 10
-    num_epochs = 3
-
-    model = NN(inputSize=input_size, numClasses=num_classes).to(device)
-    trainer = pl.Trainer(
-        accelerator="gpu",
-        devices=[0],
-        min_steps=1,
-        max_steps=3,
-        precision=16,
-        max_epochs=3,
-        min_epochs=2,
-    )
-    dm = MnistDataModule(data_dir="", bs=batch_size, num_workers=8)
-
-    trainer.fit(model, datamodule=dm)
-    trainer.validate(model, datamodule=dm)
-    trainer.test(model, datamodule=dm)
