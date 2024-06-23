@@ -26,7 +26,11 @@ git add .
 git commit -m "Initial messages"
 git push -u origin master:main  # it means push from master to origin/main
 ```
-
+Please do remember!
+```shell
+git config user.name "Boris-Jobs"
+git config user.email "1322553126@qq.com"
+```
 
 
 
