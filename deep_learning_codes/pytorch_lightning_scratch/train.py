@@ -25,7 +25,7 @@ if __name__ == "__main__":
     profiler = PyTorchProfiler(
         on_trace_ready=torch.profiler.tensorboard_trace_handler("tb_logs/profiler0"),
         schedule=torch.profiler.schedule(skip_first=1, wait=1, warmup=1, active=3)
-    )
+    )  # tensorboard --logdir=tb_logs --bind_all
     model = NN(inputSize=config.INPUT_SIZE, numClasses=config.NUM_CLASSES)
     dm = MnistDataModule(
         data_dir=config.DATA_DIR,
