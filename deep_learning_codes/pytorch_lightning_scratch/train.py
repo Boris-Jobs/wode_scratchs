@@ -15,10 +15,12 @@ from model import NN
 from dataset import MnistDataModule
 import config
 from Callbacks import MyPrintingCallback, EarlyStopping
+from pytorch_lightning.loggers import TensorBoardLogger
 
 torch.set_float32_matmul_precision("medium")  # to make lightning happy
 
 if __name__ == "__main__":
+    logger = TensorBoardLogger("tb_logs", name="boris_model")
     model = NN(inputSize=config.INPUT_SIZE, numClasses=config.NUM_CLASSES)
     dm = MnistDataModule(
         data_dir=config.DATA_DIR,

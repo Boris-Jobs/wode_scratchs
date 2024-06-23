@@ -13,7 +13,7 @@ import requests
 
 
 DATA_HUB = dict()
-DATA_URL = 'http://d2l-data.s3-accelerate.amazonaws.com/'
+DATA_URL = 'http://cz-data.s3-accelerate.amazonaws.com/'
 
 def download(name, cache_dir=os.path.join('../code_references_(will_be_deleted)/limu', 'data')):
     # 下载一个DATA_HUB中的文件，返回本地文件名
@@ -64,7 +64,7 @@ import numpy as np
 import pandas as pd
 import torch
 from torch import nn
-from d2l import torch as d2l
+import _wode_functions as cz
 
 
 
@@ -84,8 +84,8 @@ def log_rmse(net, features, labels):
 def train(net, train_features, train_labels, test_features, test_labels, num_epochs, learning_rate, weight_decay, batch_size):
     train_ls, test_ls = [], []
     # 创建两个空列表，用于存储训练过程中的训练集和测试集的损失值。
-    train_iter = d2l.load_array((train_features, train_labels), batch_size)
-    # 通过调用 d2l.load_array 函数将训练数据划分成批量，以便进行批量训练。这里使用 batch_size 指定每个批次的样本数量。
+    train_iter = cz.load_array((train_features, train_labels), batch_size)
+    # 通过调用 cz.load_array 函数将训练数据划分成批量，以便进行批量训练。这里使用 batch_size 指定每个批次的样本数量。
     
     # 这里使用的是Adam优化算法
     optimizer = torch.optim.Adam(net.parameters(),
@@ -129,7 +129,7 @@ def k_fold(k, X_train, y_train, num_epochs, learning_rate, weight_decay, batch_s
         train_l_sum += train_ls[-1]
         valid_l_sum += valid_ls[-1]
         if i == 0:
-            d2l.plot(list(range(1, num_epochs + 1)), [train_ls, valid_ls], xlabel='epoch', ylabel='rmse', xlim=[1, num_epochs],
+            cz.plot(list(range(1, num_epochs + 1)), [train_ls, valid_ls], xlabel='epoch', ylabel='rmse', xlim=[1, num_epochs],
                      legend=['train', 'valid'], yscale='log')
         print(f'折{i + 1}，训练log rmse{float(train_ls[-1]):f}, 验证log_rmse{float(valid_ls[-1]):f}')
     return train_l_sum / k, valid_l_sum / k
@@ -139,7 +139,7 @@ def train_and_pred(train_features, test_features, train_labels, test_data,
     net = get_net()
     train_ls, _ = train(net, train_features, train_labels, None, None,
                         num_epochs, lr, weight_decay, batch_size)
-    d2l.plot(np.arange(1, num_epochs + 1), [train_ls], xlabel='epoch',
+    cz.plot(np.arange(1, num_epochs + 1), [train_ls], xlabel='epoch',
              ylabel='log rmse', xlim=[1, num_epochs], yscale='log')
     print(f'训练log rmse：{float(train_ls[-1]):f}')
     # 将网络应用于测试集。
