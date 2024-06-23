@@ -13,7 +13,7 @@ import torch
 import pytorch_lightning as pl
 from torch.utils.data import random_split, DataLoader
 from torchvision import datasets, transforms
-
+from torchvision.transforms import RandomHorizontalFlip, RandomVerticalFlip
 
 class MnistDataModule(pl.LightningDataModule):
     def __init__(self, data_dir, batch_size, num_workers):
@@ -39,7 +39,11 @@ class MnistDataModule(pl.LightningDataModule):
         self.test_ds = datasets.MNIST(
             root=self.data_dir,
             train=False,
-            transform=transforms.ToTensor(),
+            transform=transforms.Compose([
+                transforms.RandomVerticalFlip(),
+                transforms.RandomHorizontalFlip(),
+                transforms.ToTensor(),
+            ]),
             download=False,
         )
 
