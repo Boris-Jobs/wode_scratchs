@@ -61,6 +61,7 @@ srun --nodes=1 --ntasks=1 --time=00:7:00 --mem-per-cpu=32G --gres=gpu:a100:2 --p
 First, create a venv(virtual environment):
 ```shell
 module load python-data
+python3 -m virtualenv path/to/venv
 python3 -m myvenv --system-site-packages path/to/venv
 source path/to/venv/bin/activate
 pip install whatshap
