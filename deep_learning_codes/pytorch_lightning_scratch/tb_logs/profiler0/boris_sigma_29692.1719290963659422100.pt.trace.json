@@ -1,0 +1,2356 @@
+
+{
+  "schemaVersion": 1,
+  "Framework": "pytorch-lightning",
+  "traceEvents": [
+  {
+    "ph": "X", "cat": "user_annotation", "name": "ProfilerStep#2", "pid": 29692, "tid": 11340,
+    "ts": 1719290963622177, "dur": 5472,
+    "args": {
+      "External id": 2561,"Ev Idx": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][Callback]MyPrintingCallback.on_validation_batch_end", "pid": 29692, "tid": 11340,
+    "ts": 1719290963622273, "dur": 22,
+    "args": {
+      "External id": 2562,"Ev Idx": 1
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][Callback]EarlyStopping{'monitor': 'val_loss', 'mode': 'min'}.on_validation_batch_end", "pid": 29692, "tid": 11340,
+    "ts": 1719290963622342, "dur": 26,
+    "args": {
+      "External id": 2563,"Ev Idx": 2
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][Callback]TQDMProgressBar.on_validation_batch_end", "pid": 29692, "tid": 11340,
+    "ts": 1719290963622404, "dur": 278,
+    "args": {
+      "External id": 2564,"Ev Idx": 3
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][Callback]ModelSummary.on_validation_batch_end", "pid": 29692, "tid": 11340,
+    "ts": 1719290963622724, "dur": 25,
+    "args": {
+      "External id": 2565,"Ev Idx": 4
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][Callback]ModelCheckpoint{'monitor': None, 'mode': 'min', 'every_n_train_steps': 0, 'every_n_epochs': 1, 'train_time_interval': None}.on_validation_batch_end", "pid": 29692, "tid": 11340,
+    "ts": 1719290963622790, "dur": 16,
+    "args": {
+      "External id": 2566,"Ev Idx": 5
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][LightningModule]NN.on_validation_batch_end", "pid": 29692, "tid": 11340,
+    "ts": 1719290963622856, "dur": 14,
+    "args": {
+      "External id": 2567,"Ev Idx": 6
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][_EvaluationLoop].val_next", "pid": 29692, "tid": 11340,
+    "ts": 1719290963623202, "dur": 566,
+    "args": {
+      "External id": 2568,"Ev Idx": 7
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "enumerate(DataLoader)#_MultiProcessingDataLoaderIter.__next__", "pid": 29692, "tid": 11340,
+    "ts": 1719290963623230, "dur": 406,
+    "args": {
+      "External id": 2569,"Ev Idx": 8
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::empty", "pid": 29692, "tid": 11340,
+    "ts": 1719290963623420, "dur": 3,
+    "args": {
+      "External id": 2570,"Ev Idx": 9
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::to", "pid": 29692, "tid": 11340,
+    "ts": 1719290963623433, "dur": 0,
+    "args": {
+      "External id": 2571,"Ev Idx": 10
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::lift_fresh", "pid": 29692, "tid": 11340,
+    "ts": 1719290963623440, "dur": 1,
+    "args": {
+      "External id": 2572,"Ev Idx": 11
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::detach_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963623447, "dur": 8,
+    "args": {
+      "External id": 2573,"Ev Idx": 12
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "detach_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963623451, "dur": 1,
+    "args": {
+      "External id": 2574,"Ev Idx": 13
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::set_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963623466, "dur": 3,
+    "args": {
+      "External id": 2575,"Ev Idx": 14
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::empty", "pid": 29692, "tid": 11340,
+    "ts": 1719290963623528, "dur": 1,
+    "args": {
+      "External id": 2576,"Ev Idx": 15
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::to", "pid": 29692, "tid": 11340,
+    "ts": 1719290963623534, "dur": 0,
+    "args": {
+      "External id": 2577,"Ev Idx": 16
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::lift_fresh", "pid": 29692, "tid": 11340,
+    "ts": 1719290963623543, "dur": 0,
+    "args": {
+      "External id": 2578,"Ev Idx": 17
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::detach_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963623550, "dur": 8,
+    "args": {
+      "External id": 2579,"Ev Idx": 18
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "detach_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963623554, "dur": 1,
+    "args": {
+      "External id": 2580,"Ev Idx": 19
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::set_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963623567, "dur": 2,
+    "args": {
+      "External id": 2581,"Ev Idx": 20
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][LightningModule]NN.on_before_batch_transfer", "pid": 29692, "tid": 11340,
+    "ts": 1719290963624201, "dur": 24,
+    "args": {
+      "External id": 2582,"Ev Idx": 21
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][Strategy]SingleDeviceStrategy.batch_to_device", "pid": 29692, "tid": 11340,
+    "ts": 1719290963624286, "dur": 655,
+    "args": {
+      "External id": 2583,"Ev Idx": 22
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][LightningModule]NN.transfer_batch_to_device", "pid": 29692, "tid": 11340,
+    "ts": 1719290963624349, "dur": 442,
+    "args": {
+      "External id": 2584,"Ev Idx": 23
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::to", "pid": 29692, "tid": 11340,
+    "ts": 1719290963624396, "dur": 287,
+    "args": {
+      "External id": 2585,"Ev Idx": 24
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::_to_copy", "pid": 29692, "tid": 11340,
+    "ts": 1719290963624401, "dur": 269,
+    "args": {
+      "External id": 2586,"Ev Idx": 25
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::empty_strided", "pid": 29692, "tid": 11340,
+    "ts": 1719290963624408, "dur": 6,
+    "args": {
+      "External id": 2587,"Ev Idx": 26
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::copy_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963624457, "dur": 184,
+    "args": {
+      "External id": 2588,"Ev Idx": 27
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::to", "pid": 29692, "tid": 11340,
+    "ts": 1719290963624720, "dur": 45,
+    "args": {
+      "External id": 2589,"Ev Idx": 28
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::_to_copy", "pid": 29692, "tid": 11340,
+    "ts": 1719290963624725, "dur": 38,
+    "args": {
+      "External id": 2590,"Ev Idx": 29
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::empty_strided", "pid": 29692, "tid": 11340,
+    "ts": 1719290963624729, "dur": 7,
+    "args": {
+      "External id": 2591,"Ev Idx": 30
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::copy_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963624742, "dur": 17,
+    "args": {
+      "External id": 2592,"Ev Idx": 31
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][LightningModule]NN.on_after_batch_transfer", "pid": 29692, "tid": 11340,
+    "ts": 1719290963624892, "dur": 20,
+    "args": {
+      "External id": 2593,"Ev Idx": 32
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][Callback]MyPrintingCallback.on_validation_batch_start", "pid": 29692, "tid": 11340,
+    "ts": 1719290963625046, "dur": 17,
+    "args": {
+      "External id": 2594,"Ev Idx": 33
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][Callback]EarlyStopping{'monitor': 'val_loss', 'mode': 'min'}.on_validation_batch_start", "pid": 29692, "tid": 11340,
+    "ts": 1719290963625101, "dur": 16,
+    "args": {
+      "External id": 2595,"Ev Idx": 34
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][Callback]TQDMProgressBar.on_validation_batch_start", "pid": 29692, "tid": 11340,
+    "ts": 1719290963625148, "dur": 18,
+    "args": {
+      "External id": 2596,"Ev Idx": 35
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][Callback]ModelSummary.on_validation_batch_start", "pid": 29692, "tid": 11340,
+    "ts": 1719290963625206, "dur": 19,
+    "args": {
+      "External id": 2597,"Ev Idx": 36
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][Callback]ModelCheckpoint{'monitor': None, 'mode': 'min', 'every_n_train_steps': 0, 'every_n_epochs': 1, 'train_time_interval': None}.on_validation_batch_start", "pid": 29692, "tid": 11340,
+    "ts": 1719290963625267, "dur": 16,
+    "args": {
+      "External id": 2598,"Ev Idx": 37
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][LightningModule]NN.on_validation_batch_start", "pid": 29692, "tid": 11340,
+    "ts": 1719290963625332, "dur": 13,
+    "args": {
+      "External id": 2599,"Ev Idx": 38
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][Strategy]SingleDeviceStrategy.validation_step", "pid": 29692, "tid": 11340,
+    "ts": 1719290963625502, "dur": 2062,
+    "args": {
+      "External id": 2600,"Ev Idx": 39
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::reshape", "pid": 29692, "tid": 11340,
+    "ts": 1719290963625584, "dur": 13,
+    "args": {
+      "External id": 2601,"Ev Idx": 40
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::view", "pid": 29692, "tid": 11340,
+    "ts": 1719290963625589, "dur": 5,
+    "args": {
+      "External id": 2602,"Ev Idx": 41
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][module]torch.nn.modules.linear.Linear: fc1", "pid": 29692, "tid": 11340,
+    "ts": 1719290963625631, "dur": 552,
+    "args": {
+      "External id": 2603,"Ev Idx": 42
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::linear", "pid": 29692, "tid": 11340,
+    "ts": 1719290963625650, "dur": 512,
+    "args": {
+      "External id": 2604,"Ev Idx": 43
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::to", "pid": 29692, "tid": 11340,
+    "ts": 1719290963625655, "dur": 40,
+    "args": {
+      "External id": 2605,"Ev Idx": 44
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::_to_copy", "pid": 29692, "tid": 11340,
+    "ts": 1719290963625659, "dur": 34,
+    "args": {
+      "External id": 2606,"Ev Idx": 45
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::empty_strided", "pid": 29692, "tid": 11340,
+    "ts": 1719290963625663, "dur": 5,
+    "args": {
+      "External id": 2607,"Ev Idx": 46
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::copy_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963625674, "dur": 15,
+    "args": {
+      "External id": 2608,"Ev Idx": 47
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::to", "pid": 29692, "tid": 11340,
+    "ts": 1719290963625701, "dur": 123,
+    "args": {
+      "External id": 2609,"Ev Idx": 48
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::_to_copy", "pid": 29692, "tid": 11340,
+    "ts": 1719290963625704, "dur": 117,
+    "args": {
+      "External id": 2610,"Ev Idx": 49
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::empty_strided", "pid": 29692, "tid": 11340,
+    "ts": 1719290963625707, "dur": 2,
+    "args": {
+      "External id": 2611,"Ev Idx": 50
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::copy_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963625810, "dur": 8,
+    "args": {
+      "External id": 2612,"Ev Idx": 51
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::to", "pid": 29692, "tid": 11340,
+    "ts": 1719290963625830, "dur": 24,
+    "args": {
+      "External id": 2613,"Ev Idx": 52
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::_to_copy", "pid": 29692, "tid": 11340,
+    "ts": 1719290963625833, "dur": 19,
+    "args": {
+      "External id": 2614,"Ev Idx": 53
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::empty_strided", "pid": 29692, "tid": 11340,
+    "ts": 1719290963625837, "dur": 2,
+    "args": {
+      "External id": 2615,"Ev Idx": 54
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::copy_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963625844, "dur": 6,
+    "args": {
+      "External id": 2616,"Ev Idx": 55
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::linear", "pid": 29692, "tid": 11340,
+    "ts": 1719290963625859, "dur": 298,
+    "args": {
+      "External id": 2617,"Ev Idx": 56
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::t", "pid": 29692, "tid": 11340,
+    "ts": 1719290963625862, "dur": 19,
+    "args": {
+      "External id": 2618,"Ev Idx": 57
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::transpose", "pid": 29692, "tid": 11340,
+    "ts": 1719290963625868, "dur": 9,
+    "args": {
+      "External id": 2619,"Ev Idx": 58
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::as_strided", "pid": 29692, "tid": 11340,
+    "ts": 1719290963625872, "dur": 2,
+    "args": {
+      "External id": 2620,"Ev Idx": 59
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::addmm", "pid": 29692, "tid": 11340,
+    "ts": 1719290963626003, "dur": 150,
+    "args": {
+      "External id": 2621,"Ev Idx": 60
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::expand", "pid": 29692, "tid": 11340,
+    "ts": 1719290963626050, "dur": 14,
+    "args": {
+      "External id": 2622,"Ev Idx": 61
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::as_strided", "pid": 29692, "tid": 11340,
+    "ts": 1719290963626060, "dur": 1,
+    "args": {
+      "External id": 2623,"Ev Idx": 62
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::relu", "pid": 29692, "tid": 11340,
+    "ts": 1719290963626196, "dur": 22,
+    "args": {
+      "External id": 2624,"Ev Idx": 63
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::clamp_min", "pid": 29692, "tid": 11340,
+    "ts": 1719290963626202, "dur": 12,
+    "args": {
+      "External id": 2625,"Ev Idx": 64
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][module]torch.nn.modules.linear.Linear: fc2", "pid": 29692, "tid": 11340,
+    "ts": 1719290963626252, "dur": 381,
+    "args": {
+      "External id": 2626,"Ev Idx": 65
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::linear", "pid": 29692, "tid": 11340,
+    "ts": 1719290963626306, "dur": 310,
+    "args": {
+      "External id": 2627,"Ev Idx": 66
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::to", "pid": 29692, "tid": 11340,
+    "ts": 1719290963626311, "dur": 29,
+    "args": {
+      "External id": 2628,"Ev Idx": 67
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::_to_copy", "pid": 29692, "tid": 11340,
+    "ts": 1719290963626314, "dur": 23,
+    "args": {
+      "External id": 2629,"Ev Idx": 68
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::empty_strided", "pid": 29692, "tid": 11340,
+    "ts": 1719290963626318, "dur": 3,
+    "args": {
+      "External id": 2630,"Ev Idx": 69
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::copy_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963626327, "dur": 7,
+    "args": {
+      "External id": 2631,"Ev Idx": 70
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::to", "pid": 29692, "tid": 11340,
+    "ts": 1719290963626346, "dur": 24,
+    "args": {
+      "External id": 2632,"Ev Idx": 71
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::_to_copy", "pid": 29692, "tid": 11340,
+    "ts": 1719290963626349, "dur": 17,
+    "args": {
+      "External id": 2633,"Ev Idx": 72
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::empty_strided", "pid": 29692, "tid": 11340,
+    "ts": 1719290963626352, "dur": 1,
+    "args": {
+      "External id": 2634,"Ev Idx": 73
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::copy_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963626358, "dur": 5,
+    "args": {
+      "External id": 2635,"Ev Idx": 74
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::linear", "pid": 29692, "tid": 11340,
+    "ts": 1719290963626376, "dur": 238,
+    "args": {
+      "External id": 2636,"Ev Idx": 75
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::t", "pid": 29692, "tid": 11340,
+    "ts": 1719290963626379, "dur": 185,
+    "args": {
+      "External id": 2637,"Ev Idx": 76
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::transpose", "pid": 29692, "tid": 11340,
+    "ts": 1719290963626506, "dur": 54,
+    "args": {
+      "External id": 2638,"Ev Idx": 77
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::as_strided", "pid": 29692, "tid": 11340,
+    "ts": 1719290963626551, "dur": 0,
+    "args": {
+      "External id": 2639,"Ev Idx": 78
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::addmm", "pid": 29692, "tid": 11340,
+    "ts": 1719290963626570, "dur": 41,
+    "args": {
+      "External id": 2640,"Ev Idx": 79
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::expand", "pid": 29692, "tid": 11340,
+    "ts": 1719290963626576, "dur": 7,
+    "args": {
+      "External id": 2641,"Ev Idx": 80
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::as_strided", "pid": 29692, "tid": 11340,
+    "ts": 1719290963626580, "dur": 0,
+    "args": {
+      "External id": 2642,"Ev Idx": 81
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][module]torch.nn.modules.loss.CrossEntropyLoss: loss_fn", "pid": 29692, "tid": 11340,
+    "ts": 1719290963626717, "dur": 424,
+    "args": {
+      "External id": 2643,"Ev Idx": 82
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::cross_entropy_loss", "pid": 29692, "tid": 11340,
+    "ts": 1719290963626741, "dur": 386,
+    "args": {
+      "External id": 2644,"Ev Idx": 83
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::log_softmax", "pid": 29692, "tid": 11340,
+    "ts": 1719290963626745, "dur": 30,
+    "args": {
+      "External id": 2645,"Ev Idx": 84
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::log_softmax", "pid": 29692, "tid": 11340,
+    "ts": 1719290963626748, "dur": 25,
+    "args": {
+      "External id": 2646,"Ev Idx": 85
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::to", "pid": 29692, "tid": 11340,
+    "ts": 1719290963626752, "dur": 1,
+    "args": {
+      "External id": 2647,"Ev Idx": 86
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::_log_softmax", "pid": 29692, "tid": 11340,
+    "ts": 1719290963626760, "dur": 10,
+    "args": {
+      "External id": 2648,"Ev Idx": 87
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::nll_loss_nd", "pid": 29692, "tid": 11340,
+    "ts": 1719290963626780, "dur": 343,
+    "args": {
+      "External id": 2649,"Ev Idx": 88
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::nll_loss", "pid": 29692, "tid": 11340,
+    "ts": 1719290963626784, "dur": 336,
+    "args": {
+      "External id": 2650,"Ev Idx": 89
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::to", "pid": 29692, "tid": 11340,
+    "ts": 1719290963626788, "dur": 30,
+    "args": {
+      "External id": 2651,"Ev Idx": 90
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::_to_copy", "pid": 29692, "tid": 11340,
+    "ts": 1719290963626791, "dur": 23,
+    "args": {
+      "External id": 2652,"Ev Idx": 91
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::empty_strided", "pid": 29692, "tid": 11340,
+    "ts": 1719290963626795, "dur": 2,
+    "args": {
+      "External id": 2653,"Ev Idx": 92
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::copy_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963626804, "dur": 7,
+    "args": {
+      "External id": 2654,"Ev Idx": 93
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::nll_loss", "pid": 29692, "tid": 11340,
+    "ts": 1719290963626827, "dur": 290,
+    "args": {
+      "External id": 2655,"Ev Idx": 94
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::nll_loss_forward", "pid": 29692, "tid": 11340,
+    "ts": 1719290963626985, "dur": 128,
+    "args": {
+      "External id": 2656,"Ev Idx": 95
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::resize_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963627065, "dur": 1,
+    "args": {
+      "External id": 2657,"Ev Idx": 96
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::clone", "pid": 29692, "tid": 11340,
+    "ts": 1719290963627236, "dur": 29,
+    "args": {
+      "External id": 2658,"Ev Idx": 97
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::empty_strided", "pid": 29692, "tid": 11340,
+    "ts": 1719290963627241, "dur": 3,
+    "args": {
+      "External id": 2659,"Ev Idx": 98
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::copy_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963627250, "dur": 13,
+    "args": {
+      "External id": 2660,"Ev Idx": 99
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::detach", "pid": 29692, "tid": 11340,
+    "ts": 1719290963627273, "dur": 8,
+    "args": {
+      "External id": 2661,"Ev Idx": 100
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "detach", "pid": 29692, "tid": 11340,
+    "ts": 1719290963627276, "dur": 2,
+    "args": {
+      "External id": 2662,"Ev Idx": 101
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::squeeze", "pid": 29692, "tid": 11340,
+    "ts": 1719290963627292, "dur": 7,
+    "args": {
+      "External id": 2663,"Ev Idx": 102
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::as_strided", "pid": 29692, "tid": 11340,
+    "ts": 1719290963627295, "dur": 1,
+    "args": {
+      "External id": 2664,"Ev Idx": 103
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::detach", "pid": 29692, "tid": 11340,
+    "ts": 1719290963627348, "dur": 8,
+    "args": {
+      "External id": 2665,"Ev Idx": 104
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "detach", "pid": 29692, "tid": 11340,
+    "ts": 1719290963627352, "dur": 1,
+    "args": {
+      "External id": 2666,"Ev Idx": 105
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::mul", "pid": 29692, "tid": 11340,
+    "ts": 1719290963627464, "dur": 15,
+    "args": {
+      "External id": 2667,"Ev Idx": 106
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::add", "pid": 29692, "tid": 11340,
+    "ts": 1719290963627490, "dur": 9,
+    "args": {
+      "External id": 2668,"Ev Idx": 107
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::add", "pid": 29692, "tid": 11340,
+    "ts": 1719290963627512, "dur": 8,
+    "args": {
+      "External id": 2669,"Ev Idx": 108
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "ProfilerStep#3", "pid": 29692, "tid": 11340,
+    "ts": 1719290963627707, "dur": 4813,
+    "args": {
+      "External id": 2670,"Ev Idx": 109
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][Callback]MyPrintingCallback.on_validation_batch_end", "pid": 29692, "tid": 11340,
+    "ts": 1719290963627783, "dur": 20,
+    "args": {
+      "External id": 2671,"Ev Idx": 110
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][Callback]EarlyStopping{'monitor': 'val_loss', 'mode': 'min'}.on_validation_batch_end", "pid": 29692, "tid": 11340,
+    "ts": 1719290963627846, "dur": 18,
+    "args": {
+      "External id": 2672,"Ev Idx": 111
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][Callback]TQDMProgressBar.on_validation_batch_end", "pid": 29692, "tid": 11340,
+    "ts": 1719290963627902, "dur": 281,
+    "args": {
+      "External id": 2673,"Ev Idx": 112
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][Callback]ModelSummary.on_validation_batch_end", "pid": 29692, "tid": 11340,
+    "ts": 1719290963628231, "dur": 20,
+    "args": {
+      "External id": 2674,"Ev Idx": 113
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][Callback]ModelCheckpoint{'monitor': None, 'mode': 'min', 'every_n_train_steps': 0, 'every_n_epochs': 1, 'train_time_interval': None}.on_validation_batch_end", "pid": 29692, "tid": 11340,
+    "ts": 1719290963628294, "dur": 19,
+    "args": {
+      "External id": 2675,"Ev Idx": 114
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][LightningModule]NN.on_validation_batch_end", "pid": 29692, "tid": 11340,
+    "ts": 1719290963628367, "dur": 13,
+    "args": {
+      "External id": 2676,"Ev Idx": 115
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][_EvaluationLoop].val_next", "pid": 29692, "tid": 11340,
+    "ts": 1719290963628638, "dur": 765,
+    "args": {
+      "External id": 2677,"Ev Idx": 116
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "enumerate(DataLoader)#_MultiProcessingDataLoaderIter.__next__", "pid": 29692, "tid": 11340,
+    "ts": 1719290963628661, "dur": 679,
+    "args": {
+      "External id": 2678,"Ev Idx": 117
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::empty", "pid": 29692, "tid": 11340,
+    "ts": 1719290963628835, "dur": 2,
+    "args": {
+      "External id": 2679,"Ev Idx": 118
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::to", "pid": 29692, "tid": 11340,
+    "ts": 1719290963628845, "dur": 1,
+    "args": {
+      "External id": 2680,"Ev Idx": 119
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::lift_fresh", "pid": 29692, "tid": 11340,
+    "ts": 1719290963628853, "dur": 0,
+    "args": {
+      "External id": 2681,"Ev Idx": 120
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::detach_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963628859, "dur": 7,
+    "args": {
+      "External id": 2682,"Ev Idx": 121
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "detach_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963628863, "dur": 1,
+    "args": {
+      "External id": 2683,"Ev Idx": 122
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::set_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963628876, "dur": 4,
+    "args": {
+      "External id": 2684,"Ev Idx": 123
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::empty", "pid": 29692, "tid": 11340,
+    "ts": 1719290963628937, "dur": 1,
+    "args": {
+      "External id": 2685,"Ev Idx": 124
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::to", "pid": 29692, "tid": 11340,
+    "ts": 1719290963628944, "dur": 1,
+    "args": {
+      "External id": 2686,"Ev Idx": 125
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::lift_fresh", "pid": 29692, "tid": 11340,
+    "ts": 1719290963628951, "dur": 0,
+    "args": {
+      "External id": 2687,"Ev Idx": 126
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::detach_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963628957, "dur": 8,
+    "args": {
+      "External id": 2688,"Ev Idx": 127
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "detach_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963628961, "dur": 0,
+    "args": {
+      "External id": 2689,"Ev Idx": 128
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::set_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963628973, "dur": 2,
+    "args": {
+      "External id": 2690,"Ev Idx": 129
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::empty", "pid": 29692, "tid": 11340,
+    "ts": 1719290963629130, "dur": 1,
+    "args": {
+      "External id": 2691,"Ev Idx": 130
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::to", "pid": 29692, "tid": 11340,
+    "ts": 1719290963629139, "dur": 0,
+    "args": {
+      "External id": 2692,"Ev Idx": 131
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::lift_fresh", "pid": 29692, "tid": 11340,
+    "ts": 1719290963629145, "dur": 0,
+    "args": {
+      "External id": 2693,"Ev Idx": 132
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::detach_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963629151, "dur": 6,
+    "args": {
+      "External id": 2694,"Ev Idx": 133
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "detach_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963629154, "dur": 1,
+    "args": {
+      "External id": 2695,"Ev Idx": 134
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::set_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963629166, "dur": 2,
+    "args": {
+      "External id": 2696,"Ev Idx": 135
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::empty", "pid": 29692, "tid": 11340,
+    "ts": 1719290963629234, "dur": 1,
+    "args": {
+      "External id": 2697,"Ev Idx": 136
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::to", "pid": 29692, "tid": 11340,
+    "ts": 1719290963629250, "dur": 0,
+    "args": {
+      "External id": 2698,"Ev Idx": 137
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::lift_fresh", "pid": 29692, "tid": 11340,
+    "ts": 1719290963629256, "dur": 1,
+    "args": {
+      "External id": 2699,"Ev Idx": 138
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::detach_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963629262, "dur": 6,
+    "args": {
+      "External id": 2700,"Ev Idx": 139
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "detach_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963629265, "dur": 1,
+    "args": {
+      "External id": 2701,"Ev Idx": 140
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::set_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963629277, "dur": 1,
+    "args": {
+      "External id": 2702,"Ev Idx": 141
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][LightningModule]NN.on_before_batch_transfer", "pid": 29692, "tid": 11340,
+    "ts": 1719290963629591, "dur": 25,
+    "args": {
+      "External id": 2703,"Ev Idx": 142
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][Strategy]SingleDeviceStrategy.batch_to_device", "pid": 29692, "tid": 11340,
+    "ts": 1719290963629677, "dur": 513,
+    "args": {
+      "External id": 2704,"Ev Idx": 143
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][LightningModule]NN.transfer_batch_to_device", "pid": 29692, "tid": 11340,
+    "ts": 1719290963629735, "dur": 330,
+    "args": {
+      "External id": 2705,"Ev Idx": 144
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::to", "pid": 29692, "tid": 11340,
+    "ts": 1719290963629784, "dur": 203,
+    "args": {
+      "External id": 2706,"Ev Idx": 145
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::_to_copy", "pid": 29692, "tid": 11340,
+    "ts": 1719290963629789, "dur": 195,
+    "args": {
+      "External id": 2707,"Ev Idx": 146
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::empty_strided", "pid": 29692, "tid": 11340,
+    "ts": 1719290963629794, "dur": 6,
+    "args": {
+      "External id": 2708,"Ev Idx": 147
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::copy_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963629806, "dur": 172,
+    "args": {
+      "External id": 2709,"Ev Idx": 148
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::to", "pid": 29692, "tid": 11340,
+    "ts": 1719290963630012, "dur": 32,
+    "args": {
+      "External id": 2710,"Ev Idx": 149
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::_to_copy", "pid": 29692, "tid": 11340,
+    "ts": 1719290963630015, "dur": 27,
+    "args": {
+      "External id": 2711,"Ev Idx": 150
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::empty_strided", "pid": 29692, "tid": 11340,
+    "ts": 1719290963630019, "dur": 4,
+    "args": {
+      "External id": 2712,"Ev Idx": 151
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::copy_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963630029, "dur": 11,
+    "args": {
+      "External id": 2713,"Ev Idx": 152
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][LightningModule]NN.on_after_batch_transfer", "pid": 29692, "tid": 11340,
+    "ts": 1719290963630144, "dur": 18,
+    "args": {
+      "External id": 2714,"Ev Idx": 153
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][Callback]MyPrintingCallback.on_validation_batch_start", "pid": 29692, "tid": 11340,
+    "ts": 1719290963630303, "dur": 26,
+    "args": {
+      "External id": 2715,"Ev Idx": 154
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][Callback]EarlyStopping{'monitor': 'val_loss', 'mode': 'min'}.on_validation_batch_start", "pid": 29692, "tid": 11340,
+    "ts": 1719290963630372, "dur": 19,
+    "args": {
+      "External id": 2716,"Ev Idx": 155
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][Callback]TQDMProgressBar.on_validation_batch_start", "pid": 29692, "tid": 11340,
+    "ts": 1719290963630426, "dur": 17,
+    "args": {
+      "External id": 2717,"Ev Idx": 156
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][Callback]ModelSummary.on_validation_batch_start", "pid": 29692, "tid": 11340,
+    "ts": 1719290963630480, "dur": 15,
+    "args": {
+      "External id": 2718,"Ev Idx": 157
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][Callback]ModelCheckpoint{'monitor': None, 'mode': 'min', 'every_n_train_steps': 0, 'every_n_epochs': 1, 'train_time_interval': None}.on_validation_batch_start", "pid": 29692, "tid": 11340,
+    "ts": 1719290963630531, "dur": 15,
+    "args": {
+      "External id": 2719,"Ev Idx": 158
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][LightningModule]NN.on_validation_batch_start", "pid": 29692, "tid": 11340,
+    "ts": 1719290963630613, "dur": 13,
+    "args": {
+      "External id": 2720,"Ev Idx": 159
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][Strategy]SingleDeviceStrategy.validation_step", "pid": 29692, "tid": 11340,
+    "ts": 1719290963630858, "dur": 1579,
+    "args": {
+      "External id": 2721,"Ev Idx": 160
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::reshape", "pid": 29692, "tid": 11340,
+    "ts": 1719290963630935, "dur": 13,
+    "args": {
+      "External id": 2722,"Ev Idx": 161
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::view", "pid": 29692, "tid": 11340,
+    "ts": 1719290963630940, "dur": 5,
+    "args": {
+      "External id": 2723,"Ev Idx": 162
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][module]torch.nn.modules.linear.Linear: fc1", "pid": 29692, "tid": 11340,
+    "ts": 1719290963630988, "dur": 364,
+    "args": {
+      "External id": 2724,"Ev Idx": 163
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::linear", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631008, "dur": 321,
+    "args": {
+      "External id": 2725,"Ev Idx": 164
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::to", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631013, "dur": 40,
+    "args": {
+      "External id": 2726,"Ev Idx": 165
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::_to_copy", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631016, "dur": 35,
+    "args": {
+      "External id": 2727,"Ev Idx": 166
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::empty_strided", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631022, "dur": 5,
+    "args": {
+      "External id": 2728,"Ev Idx": 167
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::copy_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631033, "dur": 14,
+    "args": {
+      "External id": 2729,"Ev Idx": 168
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::to", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631059, "dur": 27,
+    "args": {
+      "External id": 2730,"Ev Idx": 169
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::_to_copy", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631062, "dur": 21,
+    "args": {
+      "External id": 2731,"Ev Idx": 170
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::empty_strided", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631065, "dur": 2,
+    "args": {
+      "External id": 2732,"Ev Idx": 171
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::copy_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631072, "dur": 8,
+    "args": {
+      "External id": 2733,"Ev Idx": 172
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::to", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631092, "dur": 42,
+    "args": {
+      "External id": 2734,"Ev Idx": 173
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::_to_copy", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631115, "dur": 17,
+    "args": {
+      "External id": 2735,"Ev Idx": 174
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::empty_strided", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631119, "dur": 2,
+    "args": {
+      "External id": 2736,"Ev Idx": 175
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::copy_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631126, "dur": 3,
+    "args": {
+      "External id": 2737,"Ev Idx": 176
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::linear", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631144, "dur": 181,
+    "args": {
+      "External id": 2738,"Ev Idx": 177
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::t", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631146, "dur": 17,
+    "args": {
+      "External id": 2739,"Ev Idx": 178
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::transpose", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631150, "dur": 8,
+    "args": {
+      "External id": 2740,"Ev Idx": 179
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::as_strided", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631153, "dur": 1,
+    "args": {
+      "External id": 2741,"Ev Idx": 180
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::addmm", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631168, "dur": 152,
+    "args": {
+      "External id": 2742,"Ev Idx": 181
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::expand", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631176, "dur": 9,
+    "args": {
+      "External id": 2743,"Ev Idx": 182
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::as_strided", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631180, "dur": 1,
+    "args": {
+      "External id": 2744,"Ev Idx": 183
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::relu", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631365, "dur": 19,
+    "args": {
+      "External id": 2745,"Ev Idx": 184
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::clamp_min", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631370, "dur": 10,
+    "args": {
+      "External id": 2746,"Ev Idx": 185
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][module]torch.nn.modules.linear.Linear: fc2", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631414, "dur": 203,
+    "args": {
+      "External id": 2747,"Ev Idx": 186
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::linear", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631430, "dur": 171,
+    "args": {
+      "External id": 2748,"Ev Idx": 187
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::to", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631434, "dur": 44,
+    "args": {
+      "External id": 2749,"Ev Idx": 188
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::_to_copy", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631436, "dur": 22,
+    "args": {
+      "External id": 2750,"Ev Idx": 189
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::empty_strided", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631440, "dur": 2,
+    "args": {
+      "External id": 2751,"Ev Idx": 190
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::copy_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631449, "dur": 6,
+    "args": {
+      "External id": 2752,"Ev Idx": 191
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::to", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631484, "dur": 22,
+    "args": {
+      "External id": 2753,"Ev Idx": 192
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::_to_copy", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631487, "dur": 16,
+    "args": {
+      "External id": 2754,"Ev Idx": 193
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::empty_strided", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631490, "dur": 2,
+    "args": {
+      "External id": 2755,"Ev Idx": 194
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::copy_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631497, "dur": 4,
+    "args": {
+      "External id": 2756,"Ev Idx": 195
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::linear", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631511, "dur": 87,
+    "args": {
+      "External id": 2757,"Ev Idx": 196
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::t", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631514, "dur": 17,
+    "args": {
+      "External id": 2758,"Ev Idx": 197
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::transpose", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631518, "dur": 9,
+    "args": {
+      "External id": 2759,"Ev Idx": 198
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::as_strided", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631523, "dur": 0,
+    "args": {
+      "External id": 2760,"Ev Idx": 199
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::addmm", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631540, "dur": 56,
+    "args": {
+      "External id": 2761,"Ev Idx": 200
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::expand", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631547, "dur": 25,
+    "args": {
+      "External id": 2762,"Ev Idx": 201
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::as_strided", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631569, "dur": 0,
+    "args": {
+      "External id": 2763,"Ev Idx": 202
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][module]torch.nn.modules.loss.CrossEntropyLoss: loss_fn", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631647, "dur": 353,
+    "args": {
+      "External id": 2764,"Ev Idx": 203
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::cross_entropy_loss", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631684, "dur": 302,
+    "args": {
+      "External id": 2765,"Ev Idx": 204
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::log_softmax", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631687, "dur": 29,
+    "args": {
+      "External id": 2766,"Ev Idx": 205
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::log_softmax", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631690, "dur": 23,
+    "args": {
+      "External id": 2767,"Ev Idx": 206
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::to", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631694, "dur": 0,
+    "args": {
+      "External id": 2768,"Ev Idx": 207
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::_log_softmax", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631700, "dur": 11,
+    "args": {
+      "External id": 2769,"Ev Idx": 208
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::nll_loss_nd", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631720, "dur": 262,
+    "args": {
+      "External id": 2770,"Ev Idx": 209
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::nll_loss", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631723, "dur": 252,
+    "args": {
+      "External id": 2771,"Ev Idx": 210
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::to", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631727, "dur": 27,
+    "args": {
+      "External id": 2772,"Ev Idx": 211
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::_to_copy", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631729, "dur": 22,
+    "args": {
+      "External id": 2773,"Ev Idx": 212
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::empty_strided", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631733, "dur": 2,
+    "args": {
+      "External id": 2774,"Ev Idx": 213
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::copy_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631741, "dur": 6,
+    "args": {
+      "External id": 2775,"Ev Idx": 214
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::nll_loss", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631760, "dur": 126,
+    "args": {
+      "External id": 2776,"Ev Idx": 215
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::nll_loss_forward", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631764, "dur": 37,
+    "args": {
+      "External id": 2777,"Ev Idx": 216
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::resize_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963631773, "dur": 0,
+    "args": {
+      "External id": 2778,"Ev Idx": 217
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::clone", "pid": 29692, "tid": 11340,
+    "ts": 1719290963632098, "dur": 29,
+    "args": {
+      "External id": 2779,"Ev Idx": 218
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::empty_strided", "pid": 29692, "tid": 11340,
+    "ts": 1719290963632103, "dur": 3,
+    "args": {
+      "External id": 2780,"Ev Idx": 219
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::copy_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963632112, "dur": 12,
+    "args": {
+      "External id": 2781,"Ev Idx": 220
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::detach", "pid": 29692, "tid": 11340,
+    "ts": 1719290963632135, "dur": 8,
+    "args": {
+      "External id": 2782,"Ev Idx": 221
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "detach", "pid": 29692, "tid": 11340,
+    "ts": 1719290963632138, "dur": 2,
+    "args": {
+      "External id": 2783,"Ev Idx": 222
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::squeeze", "pid": 29692, "tid": 11340,
+    "ts": 1719290963632153, "dur": 8,
+    "args": {
+      "External id": 2784,"Ev Idx": 223
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::as_strided", "pid": 29692, "tid": 11340,
+    "ts": 1719290963632157, "dur": 0,
+    "args": {
+      "External id": 2785,"Ev Idx": 224
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::detach", "pid": 29692, "tid": 11340,
+    "ts": 1719290963632211, "dur": 7,
+    "args": {
+      "External id": 2786,"Ev Idx": 225
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "detach", "pid": 29692, "tid": 11340,
+    "ts": 1719290963632214, "dur": 1,
+    "args": {
+      "External id": 2787,"Ev Idx": 226
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::mul", "pid": 29692, "tid": 11340,
+    "ts": 1719290963632332, "dur": 14,
+    "args": {
+      "External id": 2788,"Ev Idx": 227
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::add", "pid": 29692, "tid": 11340,
+    "ts": 1719290963632355, "dur": 9,
+    "args": {
+      "External id": 2789,"Ev Idx": 228
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::add", "pid": 29692, "tid": 11340,
+    "ts": 1719290963632380, "dur": 11,
+    "args": {
+      "External id": 2790,"Ev Idx": 229
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "ProfilerStep#4", "pid": 29692, "tid": 11340,
+    "ts": 1719290963632580, "dur": 3960,
+    "args": {
+      "External id": 2791,"Ev Idx": 230
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][Callback]MyPrintingCallback.on_validation_batch_end", "pid": 29692, "tid": 11340,
+    "ts": 1719290963632655, "dur": 20,
+    "args": {
+      "External id": 2792,"Ev Idx": 231
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][Callback]EarlyStopping{'monitor': 'val_loss', 'mode': 'min'}.on_validation_batch_end", "pid": 29692, "tid": 11340,
+    "ts": 1719290963632718, "dur": 16,
+    "args": {
+      "External id": 2793,"Ev Idx": 232
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][Callback]TQDMProgressBar.on_validation_batch_end", "pid": 29692, "tid": 11340,
+    "ts": 1719290963632768, "dur": 276,
+    "args": {
+      "External id": 2794,"Ev Idx": 233
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][Callback]ModelSummary.on_validation_batch_end", "pid": 29692, "tid": 11340,
+    "ts": 1719290963633092, "dur": 20,
+    "args": {
+      "External id": 2795,"Ev Idx": 234
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][Callback]ModelCheckpoint{'monitor': None, 'mode': 'min', 'every_n_train_steps': 0, 'every_n_epochs': 1, 'train_time_interval': None}.on_validation_batch_end", "pid": 29692, "tid": 11340,
+    "ts": 1719290963633155, "dur": 18,
+    "args": {
+      "External id": 2796,"Ev Idx": 235
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][LightningModule]NN.on_validation_batch_end", "pid": 29692, "tid": 11340,
+    "ts": 1719290963633228, "dur": 15,
+    "args": {
+      "External id": 2797,"Ev Idx": 236
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][_EvaluationLoop].val_next", "pid": 29692, "tid": 11340,
+    "ts": 1719290963633502, "dur": 169,
+    "args": {
+      "External id": 2798,"Ev Idx": 237
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "enumerate(DataLoader)#_MultiProcessingDataLoaderIter.__next__", "pid": 29692, "tid": 11340,
+    "ts": 1719290963633525, "dur": 52,
+    "args": {
+      "External id": 2799,"Ev Idx": 238
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][LightningModule]NN.on_before_batch_transfer", "pid": 29692, "tid": 11340,
+    "ts": 1719290963633808, "dur": 17,
+    "args": {
+      "External id": 2800,"Ev Idx": 239
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][Strategy]SingleDeviceStrategy.batch_to_device", "pid": 29692, "tid": 11340,
+    "ts": 1719290963633888, "dur": 526,
+    "args": {
+      "External id": 2801,"Ev Idx": 240
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][LightningModule]NN.transfer_batch_to_device", "pid": 29692, "tid": 11340,
+    "ts": 1719290963633943, "dur": 317,
+    "args": {
+      "External id": 2802,"Ev Idx": 241
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::to", "pid": 29692, "tid": 11340,
+    "ts": 1719290963633983, "dur": 198,
+    "args": {
+      "External id": 2803,"Ev Idx": 242
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::_to_copy", "pid": 29692, "tid": 11340,
+    "ts": 1719290963633987, "dur": 191,
+    "args": {
+      "External id": 2804,"Ev Idx": 243
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::empty_strided", "pid": 29692, "tid": 11340,
+    "ts": 1719290963633993, "dur": 5,
+    "args": {
+      "External id": 2805,"Ev Idx": 244
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::copy_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963634004, "dur": 167,
+    "args": {
+      "External id": 2806,"Ev Idx": 245
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::to", "pid": 29692, "tid": 11340,
+    "ts": 1719290963634206, "dur": 33,
+    "args": {
+      "External id": 2807,"Ev Idx": 246
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::_to_copy", "pid": 29692, "tid": 11340,
+    "ts": 1719290963634210, "dur": 27,
+    "args": {
+      "External id": 2808,"Ev Idx": 247
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::empty_strided", "pid": 29692, "tid": 11340,
+    "ts": 1719290963634214, "dur": 3,
+    "args": {
+      "External id": 2809,"Ev Idx": 248
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::copy_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963634223, "dur": 11,
+    "args": {
+      "External id": 2810,"Ev Idx": 249
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][LightningModule]NN.on_after_batch_transfer", "pid": 29692, "tid": 11340,
+    "ts": 1719290963634349, "dur": 18,
+    "args": {
+      "External id": 2811,"Ev Idx": 250
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][Callback]MyPrintingCallback.on_validation_batch_start", "pid": 29692, "tid": 11340,
+    "ts": 1719290963634519, "dur": 20,
+    "args": {
+      "External id": 2812,"Ev Idx": 251
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][Callback]EarlyStopping{'monitor': 'val_loss', 'mode': 'min'}.on_validation_batch_start", "pid": 29692, "tid": 11340,
+    "ts": 1719290963634581, "dur": 19,
+    "args": {
+      "External id": 2813,"Ev Idx": 252
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][Callback]TQDMProgressBar.on_validation_batch_start", "pid": 29692, "tid": 11340,
+    "ts": 1719290963634635, "dur": 17,
+    "args": {
+      "External id": 2814,"Ev Idx": 253
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][Callback]ModelSummary.on_validation_batch_start", "pid": 29692, "tid": 11340,
+    "ts": 1719290963634694, "dur": 18,
+    "args": {
+      "External id": 2815,"Ev Idx": 254
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][Callback]ModelCheckpoint{'monitor': None, 'mode': 'min', 'every_n_train_steps': 0, 'every_n_epochs': 1, 'train_time_interval': None}.on_validation_batch_start", "pid": 29692, "tid": 11340,
+    "ts": 1719290963634753, "dur": 17,
+    "args": {
+      "External id": 2816,"Ev Idx": 255
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][LightningModule]NN.on_validation_batch_start", "pid": 29692, "tid": 11340,
+    "ts": 1719290963634822, "dur": 15,
+    "args": {
+      "External id": 2817,"Ev Idx": 256
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][profile][Strategy]SingleDeviceStrategy.validation_step", "pid": 29692, "tid": 11340,
+    "ts": 1719290963634982, "dur": 1466,
+    "args": {
+      "External id": 2818,"Ev Idx": 257
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::reshape", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635045, "dur": 18,
+    "args": {
+      "External id": 2819,"Ev Idx": 258
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::view", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635050, "dur": 9,
+    "args": {
+      "External id": 2820,"Ev Idx": 259
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][module]torch.nn.modules.linear.Linear: fc1", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635095, "dur": 423,
+    "args": {
+      "External id": 2821,"Ev Idx": 260
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::linear", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635111, "dur": 369,
+    "args": {
+      "External id": 2822,"Ev Idx": 261
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::to", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635116, "dur": 37,
+    "args": {
+      "External id": 2823,"Ev Idx": 262
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::_to_copy", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635119, "dur": 31,
+    "args": {
+      "External id": 2824,"Ev Idx": 263
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::empty_strided", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635124, "dur": 4,
+    "args": {
+      "External id": 2825,"Ev Idx": 264
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::copy_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635134, "dur": 13,
+    "args": {
+      "External id": 2826,"Ev Idx": 265
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::to", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635159, "dur": 26,
+    "args": {
+      "External id": 2827,"Ev Idx": 266
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::_to_copy", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635162, "dur": 20,
+    "args": {
+      "External id": 2828,"Ev Idx": 267
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::empty_strided", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635165, "dur": 2,
+    "args": {
+      "External id": 2829,"Ev Idx": 268
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::copy_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635172, "dur": 7,
+    "args": {
+      "External id": 2830,"Ev Idx": 269
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::to", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635191, "dur": 79,
+    "args": {
+      "External id": 2831,"Ev Idx": 270
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::_to_copy", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635195, "dur": 71,
+    "args": {
+      "External id": 2832,"Ev Idx": 271
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::empty_strided", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635200, "dur": 1,
+    "args": {
+      "External id": 2833,"Ev Idx": 272
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::copy_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635207, "dur": 40,
+    "args": {
+      "External id": 2834,"Ev Idx": 273
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::linear", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635277, "dur": 199,
+    "args": {
+      "External id": 2835,"Ev Idx": 274
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::t", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635318, "dur": 64,
+    "args": {
+      "External id": 2836,"Ev Idx": 275
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::transpose", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635322, "dur": 55,
+    "args": {
+      "External id": 2837,"Ev Idx": 276
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::as_strided", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635370, "dur": 2,
+    "args": {
+      "External id": 2838,"Ev Idx": 277
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::addmm", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635388, "dur": 84,
+    "args": {
+      "External id": 2839,"Ev Idx": 278
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::expand", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635421, "dur": 8,
+    "args": {
+      "External id": 2840,"Ev Idx": 279
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::as_strided", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635425, "dur": 1,
+    "args": {
+      "External id": 2841,"Ev Idx": 280
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::relu", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635534, "dur": 19,
+    "args": {
+      "External id": 2842,"Ev Idx": 281
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::clamp_min", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635538, "dur": 12,
+    "args": {
+      "External id": 2843,"Ev Idx": 282
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][module]torch.nn.modules.linear.Linear: fc2", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635591, "dur": 204,
+    "args": {
+      "External id": 2844,"Ev Idx": 283
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::linear", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635612, "dur": 165,
+    "args": {
+      "External id": 2845,"Ev Idx": 284
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::to", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635617, "dur": 32,
+    "args": {
+      "External id": 2846,"Ev Idx": 285
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::_to_copy", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635620, "dur": 26,
+    "args": {
+      "External id": 2847,"Ev Idx": 286
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::empty_strided", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635625, "dur": 3,
+    "args": {
+      "External id": 2848,"Ev Idx": 287
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::copy_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635635, "dur": 8,
+    "args": {
+      "External id": 2849,"Ev Idx": 288
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::to", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635654, "dur": 26,
+    "args": {
+      "External id": 2850,"Ev Idx": 289
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::_to_copy", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635657, "dur": 19,
+    "args": {
+      "External id": 2851,"Ev Idx": 290
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::empty_strided", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635660, "dur": 1,
+    "args": {
+      "External id": 2852,"Ev Idx": 291
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::copy_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635666, "dur": 5,
+    "args": {
+      "External id": 2853,"Ev Idx": 292
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::linear", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635686, "dur": 88,
+    "args": {
+      "External id": 2854,"Ev Idx": 293
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::t", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635690, "dur": 35,
+    "args": {
+      "External id": 2855,"Ev Idx": 294
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::transpose", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635714, "dur": 7,
+    "args": {
+      "External id": 2856,"Ev Idx": 295
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::as_strided", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635718, "dur": 1,
+    "args": {
+      "External id": 2857,"Ev Idx": 296
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::addmm", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635729, "dur": 42,
+    "args": {
+      "External id": 2858,"Ev Idx": 297
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::expand", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635739, "dur": 6,
+    "args": {
+      "External id": 2859,"Ev Idx": 298
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::as_strided", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635742, "dur": 1,
+    "args": {
+      "External id": 2860,"Ev Idx": 299
+    }
+  },
+  {
+    "ph": "X", "cat": "user_annotation", "name": "[pl][module]torch.nn.modules.loss.CrossEntropyLoss: loss_fn", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635830, "dur": 233,
+    "args": {
+      "External id": 2861,"Ev Idx": 300
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::cross_entropy_loss", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635852, "dur": 198,
+    "args": {
+      "External id": 2862,"Ev Idx": 301
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::log_softmax", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635857, "dur": 96,
+    "args": {
+      "External id": 2863,"Ev Idx": 302
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::log_softmax", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635860, "dur": 85,
+    "args": {
+      "External id": 2864,"Ev Idx": 303
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::to", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635864, "dur": 0,
+    "args": {
+      "External id": 2865,"Ev Idx": 304
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::_log_softmax", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635870, "dur": 7,
+    "args": {
+      "External id": 2866,"Ev Idx": 305
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::nll_loss_nd", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635959, "dur": 87,
+    "args": {
+      "External id": 2867,"Ev Idx": 306
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::nll_loss", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635963, "dur": 80,
+    "args": {
+      "External id": 2868,"Ev Idx": 307
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::to", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635966, "dur": 26,
+    "args": {
+      "External id": 2869,"Ev Idx": 308
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::_to_copy", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635970, "dur": 20,
+    "args": {
+      "External id": 2870,"Ev Idx": 309
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::empty_strided", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635973, "dur": 2,
+    "args": {
+      "External id": 2871,"Ev Idx": 310
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::copy_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635981, "dur": 6,
+    "args": {
+      "External id": 2872,"Ev Idx": 311
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::nll_loss", "pid": 29692, "tid": 11340,
+    "ts": 1719290963635997, "dur": 24,
+    "args": {
+      "External id": 2873,"Ev Idx": 312
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::nll_loss_forward", "pid": 29692, "tid": 11340,
+    "ts": 1719290963636000, "dur": 17,
+    "args": {
+      "External id": 2874,"Ev Idx": 313
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::resize_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963636008, "dur": 0,
+    "args": {
+      "External id": 2875,"Ev Idx": 314
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::clone", "pid": 29692, "tid": 11340,
+    "ts": 1719290963636163, "dur": 30,
+    "args": {
+      "External id": 2876,"Ev Idx": 315
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::empty_strided", "pid": 29692, "tid": 11340,
+    "ts": 1719290963636168, "dur": 3,
+    "args": {
+      "External id": 2877,"Ev Idx": 316
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::copy_", "pid": 29692, "tid": 11340,
+    "ts": 1719290963636177, "dur": 12,
+    "args": {
+      "External id": 2878,"Ev Idx": 317
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::detach", "pid": 29692, "tid": 11340,
+    "ts": 1719290963636201, "dur": 8,
+    "args": {
+      "External id": 2879,"Ev Idx": 318
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "detach", "pid": 29692, "tid": 11340,
+    "ts": 1719290963636204, "dur": 2,
+    "args": {
+      "External id": 2880,"Ev Idx": 319
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::squeeze", "pid": 29692, "tid": 11340,
+    "ts": 1719290963636218, "dur": 8,
+    "args": {
+      "External id": 2881,"Ev Idx": 320
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::as_strided", "pid": 29692, "tid": 11340,
+    "ts": 1719290963636222, "dur": 0,
+    "args": {
+      "External id": 2882,"Ev Idx": 321
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::detach", "pid": 29692, "tid": 11340,
+    "ts": 1719290963636254, "dur": 5,
+    "args": {
+      "External id": 2883,"Ev Idx": 322
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "detach", "pid": 29692, "tid": 11340,
+    "ts": 1719290963636256, "dur": 1,
+    "args": {
+      "External id": 2884,"Ev Idx": 323
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::mul", "pid": 29692, "tid": 11340,
+    "ts": 1719290963636356, "dur": 12,
+    "args": {
+      "External id": 2885,"Ev Idx": 324
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::add", "pid": 29692, "tid": 11340,
+    "ts": 1719290963636376, "dur": 9,
+    "args": {
+      "External id": 2886,"Ev Idx": 325
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", "name": "aten::add", "pid": 29692, "tid": 11340,
+    "ts": 1719290963636397, "dur": 6,
+    "args": {
+      "External id": 2887,"Ev Idx": 326
+    }
+  },
+  {
+    "name": "thread_name", "ph": "M", "ts": 1719290963621989, "pid": 29692, "tid": 11340,
+    "args": {
+      "name": "thread 11340 ()"
+    }
+  },
+  {
+    "name": "thread_sort_index", "ph": "M", "ts": 1719290963621989, "pid": 29692, "tid": 11340,
+    "args": {
+      "sort_index": 11340
+    }
+  },
+  {
+    "name": "thread_name", "ph": "M", "ts": 1719290963621989, "pid": 29692, "tid": 11340,
+    "args": {
+      "name": "thread 11340 ()"
+    }
+  },
+  {
+    "name": "thread_sort_index", "ph": "M", "ts": 1719290963621989, "pid": 29692, "tid": 11340,
+    "args": {
+      "sort_index": 11340
+    }
+  },
+  {
+    "name": "thread_name", "ph": "M", "ts": 1719290963621989, "pid": 29692, "tid": 26264,
+    "args": {
+      "name": "thread 26264 ()"
+    }
+  },
+  {
+    "name": "thread_sort_index", "ph": "M", "ts": 1719290963621989, "pid": 29692, "tid": 26264,
+    "args": {
+      "sort_index": 26264
+    }
+  },
+  {
+    "ph": "X", "cat": "Trace", "ts": 1719290963621888, "dur": 14741,
+    "pid": "Spans", "tid": "PyTorch Profiler",
+    "name": "PyTorch Profiler (0)",
+    "args": {
+      "Op count": 0
+    }
+  },
+  {
+    "name": "process_sort_index", "ph": "M", "ts": 1719290963621888,
+    "pid": "Spans", "tid": 0,
+    "args": {
+      "sort_index": 536870912
+    }
+  },
+  {
+    "name": "Iteration Start: PyTorch Profiler", "ph": "i", "s": "g",
+    "pid": "Traces", "tid": "Trace PyTorch Profiler", "ts": 1719290963621888
+  },
+  {
+    "name": "Record Window End", "ph": "i", "s": "g",
+    "pid": "", "tid": "", "ts": 1719290963637501
+  }
+  ],
+  "traceName": "tb_logs/profiler0/boris_sigma_29692.1719290963659422100.pt.trace.json"
+}
