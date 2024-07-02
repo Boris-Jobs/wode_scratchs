@@ -94,8 +94,9 @@ pip install --user whatshap
 ```
 
 
+/scratch/project_2007023/boris/envs/missing/bin/python -m black .
 
-
+/scratch/project_2007023/boris/envs/missing/bin/python -m tensorboard.main --logdir=`pwd`
 
 
 
@@ -182,3 +183,15 @@ To cancel tasks:
 ```shell
 scancel ID
 ```
+To see details of a task:
+```shell
+scontrol show job JOBID
+```
+
+eval `ssh-agent -s`
+
+chmod 600 ~/.ssh/379_rsa
+
+ssh-add ./.ssh/379_rsa
+
+ssh -T git@github.com
