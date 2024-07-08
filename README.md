@@ -190,7 +190,7 @@ scontrol show job JOBID
 
 eval `ssh-agent -s`
 
-chmod 600 ~/.ssh/379_rsa
+chmod 600 ./.ssh/379_rsa
 
 ssh-add ./.ssh/379_rsa
 
