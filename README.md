@@ -188,6 +188,8 @@ To see details of a task:
 scontrol show job JOBID
 ```
 
+遇到SSH无法提交:
+```shell
 eval `ssh-agent -s`
 
 chmod 600 ./.ssh/379_rsa
@@ -195,3 +197,4 @@ chmod 600 ./.ssh/379_rsa
 ssh-add ./.ssh/379_rsa
 
 ssh -T git@github.com
+```
