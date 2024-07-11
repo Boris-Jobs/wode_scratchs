@@ -45,6 +45,7 @@ from torch import nn
 from torch.nn import functional as F
 from torchvision import transforms
 
+cz.DATA_HUB['time_machine'] = (cz.DATA_URL + 'timemachine.txt', '090b5e7e70c295757f55df93cb0a180b9691891a')
 
 
 
@@ -87,6 +88,13 @@ class Accumulator:
 
 
 #####################################################################
+
+
+def read_time_machine():
+    with open(cz.download('time_machine'), 'r') as f:
+        lines = f.readlines()
+    return [re.sub('[^A-Za-z+]+', ' ', line).strip().lower() for line in lines]
+
 
 def load_data_fashion_mnist(batch_size, resize=None):
     r"""Download the Fashion-MNIST dataset and then load it into memory.
