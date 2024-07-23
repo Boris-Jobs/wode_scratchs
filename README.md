@@ -61,8 +61,7 @@ srun --nodes=1 --ntasks=1 --time=00:7:00 --mem-per-cpu=32G --gres=gpu:a100:2 --p
 First, create a venv(virtual environment):
 ```shell
 module load python-data
-python3 -m virtualenv path/to/venv
-python3 -m myvenv --system-site-packages path/to/venv
+python3 -m venv --system-site-packages path/to/venv
 source path/to/venv/bin/activate
 pip install whatshap
 ```
@@ -188,13 +187,19 @@ To see details of a task:
 scontrol show job JOBID
 ```
 
-遇到SSH无法提交:
+ssh way:
 ```shell
+ssh-keygen -t ed25519 -C "1322553126@qq.com"
+
 eval `ssh-agent -s`
 
 chmod 600 ./.ssh/379_rsa
 
 ssh-add ./.ssh/379_rsa
+
+cat ./.ssh/379_rsa.pub  # 添加内容到GitHub的ssh key里
+
+git remote -v
 
 ssh -T git@github.com
 ```
