@@ -65,6 +65,7 @@ python3 -m venv --system-site-packages path/to/venv
 source path/to/venv/bin/activate
 pip install whatshap
 ```
+
 Then you could find more information by:
 ```shell
 pip show whatshap
