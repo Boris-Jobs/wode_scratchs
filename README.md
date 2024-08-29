@@ -194,11 +194,11 @@ ssh-keygen -t ed25519 -C "1322553126@qq.com"
 
 eval `ssh-agent -s`
 
-chmod 600 ./.ssh/379_rsa
+chmod 600 /scratch/project_2003238/v/.ssh/epep_ssh
 
-ssh-add ./.ssh/379_rsa
+ssh-add /scratch/project_2003238/v/.ssh/epep_ssh
 
-cat ./.ssh/379_rsa.pub  # 添加内容到GitHub的ssh key里
+cat /scratch/project_2003238/v/.ssh/epep_ssh.pub  # 添加内容到GitHub的ssh key里
 
 git remote -v
 

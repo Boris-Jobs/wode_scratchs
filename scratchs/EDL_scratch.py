@@ -1,3 +1,6 @@
+print('Starting EDL_scratch.py...')
+
+
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -84,7 +87,7 @@ class LeNet_EDL(nn.Module):
         x = self.fc2(x)
         return x
 
-    def calculate_loss(self, logits, labels):
+    def calculate_loss(self, logits, labels, logits2evidence=relu_evidence):
         evidence = self.logits2evidence(logits)
         alpha = evidence + 1
         p = labels
@@ -118,11 +121,15 @@ class LeNet_EDL(nn.Module):
 
 
 def train_and_evaluate(model, train_loader, test_loader, epochs=50, batch_size=1000):
+
+    print('start training.')
     optimizer = optim.Adam(model.parameters())
     criterion = nn.CrossEntropyLoss()
 
     for epoch in range(epochs):
+
         model.train()
+
         for i, (data, target) in enumerate(train_loader):
             optimizer.zero_grad()
             output = model(data)
@@ -185,6 +192,8 @@ def train_and_evaluate(model, train_loader, test_loader, epochs=50, batch_size=1
 
 if __name__ == '__main__':
     # Load FashionMNIST dataset from local directory
+    print('process begin.')
+
     transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize((0.5,), (0.5,))])
     train_dataset = datasets.FashionMNIST(root='./data', train=True, download=False, transform=transform)
     test_dataset = datasets.FashionMNIST(root='./data', train=False, download=False, transform=transform)
@@ -193,4 +202,5 @@ if __name__ == '__main__':
     test_loader = DataLoader(test_dataset, batch_size=1000, shuffle=False)
 
     model = LeNet_EDL()
+
     train_and_evaluate(model, train_loader, test_loader)
