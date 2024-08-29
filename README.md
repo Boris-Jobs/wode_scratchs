@@ -1,5 +1,9 @@
 # NOTES of Machine Learning & Deep Learning
 
+
+
+## Tips of using servers for my own.
+
 To show the hidden items:
 ```shell
 ls -a
