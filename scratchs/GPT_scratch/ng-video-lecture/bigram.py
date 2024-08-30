@@ -18,14 +18,14 @@ torch.manual_seed(1337)
 with open('input.txt', 'r', encoding='utf-8') as f:
     text = f.read()
 
-# here are all the unique characters that occur in this text
+# text中所有可能的独立字符
 chars = sorted(list(set(text)))
 vocab_size = len(chars)
-# create a mapping from characters to integers
-stoi = { ch:i for i,ch in enumerate(chars) }
-itos = { i:ch for i,ch in enumerate(chars) }
-encode = lambda s: [stoi[c] for c in s] # encoder: take a string, output a list of integers
-decode = lambda l: ''.join([itos[i] for i in l]) # decoder: take a list of integers, output a string
+# 构建字符到整数的映射
+stoi = {ch: i for i, ch in enumerate(chars)}  # str到int
+itos = {i: ch for i, ch in enumerate(chars)}  # int到str
+encode = lambda s: [stoi[c] for c in s]  # encoder: take a string, output a list of integers
+decode = lambda l: ''.join([itos[i] for i in l])  # decoder: take a list of integers, output a string
 
 # Train and test splits
 data = torch.tensor(encode(text), dtype=torch.long)
