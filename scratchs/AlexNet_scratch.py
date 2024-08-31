@@ -10,7 +10,6 @@ AI that benefits all humanity is all you need.
 
 AlexNet以Alex Krizhevsky的名字命名，他是论文 (Krizhevsky et al., 2012)的第一作者。
 
-
 """
 
 # (input.size()[0] - kernel_size + padding * 2) // stride + 1 = output.size()[0]
