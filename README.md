@@ -2,7 +2,8 @@
 
 
 
-## Tips of using servers for my own.
+## Tips for using servers.
+
 
 To show the hidden items:
 ```shell
@@ -10,7 +11,7 @@ ls -a
 ```
 To pull and push requests by git:
 ```shell
-git pull origin main
+git pull
 
 git status
 git add .
@@ -25,7 +26,7 @@ For folders which connected a remote git repository:
 ```shell
 cd path/to/your/folder
 git init
-git remote add origin https://github.com/Boris-Jobs/Kronecker_prompts.git
+git remote add origin https://github.com/Boris-Jobs/xxx.git
 git add .
 git commit -m "Initial messages"
 git push -u origin master:main  # it means push from master to origin/main
@@ -53,7 +54,7 @@ module spider pytorch/2.2
 Then, we could load the available ones and run the scripts:
 ```shell
 module load pytorch/2.2
-srun --nodes=1 --ntasks=1 --time=00:7:00 --mem-per-cpu=32G --gres=gpu:a100:2 --partition=gputest --account=project_2002243 python3 train.py
+srun --nodes=1 --ntasks=1 --time=00:7:00 --mem-per-cpu=32G --gres=gpu:a100:2 --partition=gputest --account=project_2006362 python3 train.py
 ```
 
 
@@ -139,9 +140,9 @@ conda run --name envname python3 -c "import sys; print(sys.executable)"
 ```
 How to install packages by specific ways:
 ```shell
-/scratch/project_2004030/boris/missing/bin/pip install --target=/scratch/project_2004030/boris/missing/lib/python3.8/site-packages/ -r requirements.txt
+/scratch/project_2004030/boris/missing/bin/pip install --target=/scratch/project_xxx/xx/lib/python3.8/site-packages/ -r requirements.txt
 
-/scratch/project_2004030/boris/missing/bin/pip install --target=/scratch/project_2004030/boris/missing/lib/python3.8/site-packages/ GitPython
+/scratch/project_2004030/boris/missing/bin/pip install --target=/scratch/project_xxx/xx/lib/python3.8/site-packages/ GitPython
 ```
 
 

@@ -1,3 +1,5 @@
+# srun --nodes=1 --ntasks=1 --time=00:15:00 --mem-per-cpu=32G --gres=gpu:a100:1 --partition=gputest --account=project_2006362 python3 bigram.py
+
 import torch
 import torch.nn as nn
 from torch.nn import functional as F
@@ -5,11 +7,11 @@ from torch.nn import functional as F
 # hyperparameters
 batch_size = 32 # how many independent sequences will we process in parallel?
 block_size = 8 # what is the maximum context length for predictions?
-max_iters = 3000
+max_iters = 5  # 3000
 eval_interval = 300
 learning_rate = 1e-2
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
-eval_iters = 200
+eval_iters = 1  # 200
 # ------------
 
 torch.manual_seed(1337)
@@ -41,6 +43,7 @@ def get_batch(split):
     x = torch.stack([data[i:i+block_size] for i in ix])
     y = torch.stack([data[i+1:i+block_size+1] for i in ix])
     x, y = x.to(device), y.to(device)
+    print("get_batch, size of x: ", x.shape, "size of y: ", y.shape)
     return x, y
 
 @torch.no_grad()
@@ -55,6 +58,7 @@ def estimate_loss():
             losses[k] = loss.item()
         out[split] = losses.mean()
     model.train()
+    print("out: ", out)
     return out
 
 # super simple bigram model
@@ -69,6 +73,7 @@ class BigramLanguageModel(nn.Module):
 
         # idx and targets are both (B,T) tensor of integers
         logits = self.token_embedding_table(idx) # (B,T,C)
+        print("forward, size of logits: ", logits.shape)
 
         if targets is None:
             loss = None
@@ -77,7 +82,7 @@ class BigramLanguageModel(nn.Module):
             logits = logits.view(B*T, C)
             targets = targets.view(B*T)
             loss = F.cross_entropy(logits, targets)
-
+        print("forward, shape of logits: ", logits.shape, "The loss is: ", loss)
         return logits, loss
 
     def generate(self, idx, max_new_tokens):
@@ -85,14 +90,19 @@ class BigramLanguageModel(nn.Module):
         for _ in range(max_new_tokens):
             # get the predictions
             logits, loss = self(idx)
+            print("generate, For generating, the size of idx is: ", idx.shape, "after reasoning, the logits.shape is: ", logits.shape, "the loss is: ", loss)
             # focus only on the last time step
             logits = logits[:, -1, :] # becomes (B, C)
+            print("generate, Take the last element of logits, the shape of the last logits is: ", logits.shape)
             # apply softmax to get probabilities
             probs = F.softmax(logits, dim=-1) # (B, C)
+            print("generate, The shape of probs is: ", probs.shape)
             # sample from the distribution
             idx_next = torch.multinomial(probs, num_samples=1) # (B, 1)
+            print("generate, the shape of idx_next: ", idx_next.shape)
             # append sampled index to the running sequence
             idx = torch.cat((idx, idx_next), dim=1) # (B, T+1)
+            print("generate, The final shape of idx is: ", idx.shape)
         return idx
 
 model = BigramLanguageModel(vocab_size)
@@ -119,4 +129,4 @@ for iter in range(max_iters):
 
 # generate from the model
 context = torch.zeros((1, 1), dtype=torch.long, device=device)
-print(decode(m.generate(context, max_new_tokens=500)[0].tolist()))
+print(decode(m.generate(context, max_new_tokens=3)[0].tolist()))
