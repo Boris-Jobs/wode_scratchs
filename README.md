@@ -42,14 +42,34 @@ git push -u origin master:main  # it means push from master to origin/main
 Please do remember!!!
 ```shell
 git config user.name "Boris-Jobs"
-git config user.email "1322553126@qq.com"
+git config user.email "13xxx126@qq.com"
+```
+Using SSH:
+```shell
+ssh-keygen -t ed25519 -C "13xxx126@qq.com"
+# ed25519 意味着是基于 Ed25519 椭圆曲线算法生成密钥对
+
+eval `ssh-agent -s`
+
+chmod 600 /scratch/project_20xxx8/v/.ssh/your_ssh_file
+
+ssh-add /scratch/project_20xxx8/v/.ssh/your_ssh_file
+
+cat /scratch/project_20xxx8/v/.ssh/your_ssh_file.pub  
+# 添加内容到GitHub的ssh key里
+
+git remote -v
+
+ssh -T git@github.com
 ```
 
 
 
 
-
 ## Load Pytorch on Mahti
+可参考:
+[https://docs.csc.fi/apps/pytorch/](https://docs.csc.fi/apps/pytorch/)  
+
 To see which pytorch is loaded, or default, or available:
 ```shell
 module avail pytorch
@@ -62,7 +82,7 @@ module spider pytorch/2.2
 Then, we could load the available ones and run the scripts:
 ```shell
 module load pytorch/2.2
-srun --nodes=1 --ntasks=1 --time=00:7:00 --mem-per-cpu=32G --gres=gpu:a100:2 --partition=gputest --account=project_2006362 python3 train.py
+srun --nodes=1 --ntasks=1 --time=00:7:00 --mem-per-cpu=32G --gres=gpu:a100:2 --partition=gputest --account=project_2xxxx2 python3 train.py
 ```
 
 
@@ -70,11 +90,12 @@ srun --nodes=1 --ntasks=1 --time=00:7:00 --mem-per-cpu=32G --gres=gpu:a100:2 --p
 
 
 
-## Installing packages by venv
+## Installing packages by venv in Mahti
 First, create a venv(virtual environment):
 ```shell
 module load python-data
 python3 -m venv --system-site-packages path/to/venv
+# python3 -m venv --system-site-packages 是固定的
 source path/to/venv/bin/activate
 pip install whatshap
 ```
@@ -98,6 +119,8 @@ pip install whatshap
 
 
 ## Installing packages by using pip install --user
+可参考:
+[https://docs.csc.fi/support/tutorials/python-usage-guide/#installing-python-packages-to-existing-modules](https://docs.csc.fi/support/tutorials/python-usage-guide/#installing-python-packages-to-existing-modules)
 
 Example to add whatshap to python-data module:
 ```shell
@@ -106,10 +129,11 @@ export PYTHONUSERBASE=path/to/venv
 pip install --user whatshap
 ```
 
+## Tricks
+美化代码
+/scratch/project_xxx23/boris/envs/missing/bin/python -m black .
 
-/scratch/project_2007023/boris/envs/missing/bin/python -m black .
-
-/scratch/project_2007023/boris/envs/missing/bin/python -m tensorboard.main --logdir=`pwd`
+/scratch/project_xxx23/boris/envs/missing/bin/python -m tensorboard.main --logdir=`pwd`
 
 
 
@@ -139,8 +163,8 @@ Ctrl + Shift + P
 ```
 To activate my own conda env:
 ```shell
-source /scratch/project_2007023/boris/miniconda3/bin/activate
-conda activate missing
+source /scratch/project_20xxxx3/boris/miniconda3/bin/activate
+conda activate your_venv
 ```
 To run brief command by specific env:
 ```shell
@@ -148,9 +172,9 @@ conda run --name envname python3 -c "import sys; print(sys.executable)"
 ```
 How to install packages by specific ways:
 ```shell
-/scratch/project_2004030/boris/missing/bin/pip install --target=/scratch/project_xxx/xx/lib/python3.8/site-packages/ -r requirements.txt
+/scratch/project_20xxxx0/xxx/missing/bin/pip install --target=/scratch/project_xxxx/xx/lib/python3.8/site-packages/ -r requirements.txt
 
-/scratch/project_2004030/boris/missing/bin/pip install --target=/scratch/project_xxx/xx/lib/python3.8/site-packages/ GitPython
+/scratch/project_2xxx030/boris/missing/bin/pip install --target=/scratch/project_xxx/xx/lib/python3.8/site-packages/ GitPython
 ```
 
 
@@ -160,7 +184,7 @@ How to install packages by specific ways:
 
 
 
-## Some tricks
+## Other tricks
 显示当前目录所有文件的disk usage并按大小排序:
 ```shell
 du -sh .[!.]* * | sort -h
@@ -188,6 +212,8 @@ sinfo -o "%10N %10G %10c %10D %10T %20F" --Node | grep gpu
 squeue -u username; ssh [nodelist]; nvidia-smi
 ```
 
+
+
 查看任务:
 ```shell
 sjstat
@@ -201,19 +227,4 @@ To see details of a task:
 scontrol show job JOBID
 ```
 
-ssh way:
-```shell
-ssh-keygen -t ed25519 -C "1322553126@qq.com"
 
-eval `ssh-agent -s`
-
-chmod 600 /scratch/project_2003238/v/.ssh/epep_ssh
-
-ssh-add /scratch/project_2003238/v/.ssh/epep_ssh
-
-cat /scratch/project_2003238/v/.ssh/epep_ssh.pub  # 添加内容到GitHub的ssh key里
-
-git remote -v
-
-ssh -T git@github.com
-```
