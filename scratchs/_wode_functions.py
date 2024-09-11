@@ -1,3 +1,5 @@
+# This file contains all built-in functions for this repository 'wode_scratchs'.
+
 DATA_HUB = dict()
 DATA_URL = 'http://d2l-data.s3-accelerate.amazonaws.com/'
 

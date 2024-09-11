@@ -59,7 +59,6 @@ if __name__ == '__main__':
         nn.Dropout(p=0.5),
         nn.Linear(4096, 4096), nn.ReLU(),
         nn.Dropout(p=0.5),
-        ####### 为什么会需要一个Dropout在这里呢 #######
         # 最后是输出层。由于这里使用Fashion-MNIST，所以用类别数为10，而非论文中的1000
         nn.Linear(4096, 10))
 

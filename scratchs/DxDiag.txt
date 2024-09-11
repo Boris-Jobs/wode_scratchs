@@ -1,3 +1,5 @@
+由 Windows 内置的诊断工具 DirectX Diagnostic Tool (DxDiag) 生成
+Win + R, 指令: dxdiag
 ------------------
 System Information
 ------------------

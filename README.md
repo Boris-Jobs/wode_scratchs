@@ -1,8 +1,11 @@
-# NOTES of Machine Learning & Deep Learning
+# wode_scratchs
 
 
 
-## Tips for using servers.
+
+
+
+## boris's Common Command Manual
 
 
 To show the hidden items:
