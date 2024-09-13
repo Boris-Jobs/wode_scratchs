@@ -10,3 +10,6 @@ Summarize Leetcode solutions from scratch.
 |[98. 验证二叉搜索树](https://leetcode.cn/problems/validate-binary-search-tree/description/)|BST, Recursion, 分治法|要额外定义函数. 空node返回True, 满足minval<node.val<maxval, 随后递归, 对node输入负无穷到正无穷判定|
 |[104. 二叉树的最大深度](https://leetcode.cn/problems/maximum-depth-of-binary-tree/description/)|Recursion, 分治法|首先判断空node的情况, 随后分治法就完了.|
 |[103. 二叉树的锯齿形层序遍历](https://leetcode.cn/problems/binary-tree-zigzag-level-order-traversal/description/)|BFS|需要定义仨: 结果的[[], [], []], 装一层节点的collections.deque, start_from_left的bool. **技巧**: 1. 从左往右的时候, popleft, 左右左右地append, 2. 从右往左地时候, pop, 右左右左地appendleft.|
+|[107. 二叉树的层序遍历 II](https://leetcode.cn/problems/binary-tree-level-order-traversal-ii/description/)|BFS|return res[::-1]|
+|[102. 二叉树的层序遍历](https://leetcode.cn/problems/binary-tree-level-order-traversal/description/)|BFS|需要定义: 1. 存当前层的collections.deque, 2. 这个deque的len, 3. 存结果的res = [], 每个层循环append一个[]. **技巧**: popleft, 左右左右地append.|
+|[236. 二叉树的最近公共祖先](https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree/description/)|DFS||
