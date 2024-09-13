@@ -7,7 +7,7 @@ Inspired by that, I've decided to create this repository to document the four to
 
 The following section, `boris's Common Command Manual`, contains some useful commands I frequently use when working with `git` and clusters. Feel free to explore if you're interested.
 
-
+Also, I'm making a project of Leetcode: [algorithms_scratch](./scratchs/algorithms_scratch/).
 
 
 ## boris's Common Command Manual
