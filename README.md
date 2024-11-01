@@ -1,13 +1,12 @@
 # wode_scratchs
 
+__Currently, I'm focusing on: [algorithms_scratch](./scratchs/algorithms_scratch/).__
 
 I first realized the significance of "scratch" during the Harvard's ['CS50'](https://cs50.harvard.edu/x/2024/) course, where they built many foundational concepts of computing from scratch.   
 
-Inspired by that, I've decided to create this repository to document the four topics I am passionate about, __machine learning algorithms, deep learning frameworks, large language models, and data structures and algorithms__ — all built from scratch. You'll find these files under the `./scratchs/` directory.
+Inspired by that, I've decided to create this repository to document some interesting things built from scratch. You'll find these files under the `./scratchs/` directory.
 
 The following section, `boris's Common Command Manual`, contains some useful commands I frequently use when working with `git` and clusters. Feel free to explore if you're interested.
-
-Also, I'm making a project of Leetcode: [algorithms_scratch](./scratchs/algorithms_scratch/).
 
 
 ## boris's Common Command Manual
